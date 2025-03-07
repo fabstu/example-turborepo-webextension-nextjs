@@ -1,0 +1,30 @@
+{
+	"name": "Bookify",
+	"short_name": "Bookify",
+	"description": "Manages dedicated bookmark folder",
+	"version": "1.0",
+	"manifest_version": 3,
+	"action": {
+		"default_popup": "index.html",
+		"default_title": "Bookify",
+		"default_icon": {
+			"16": "Bookify.png",
+			"48": "Bookify.png",
+			"128": "Bookify.png"
+		}
+	},
+	"permissions": [
+		"history",
+		"storage",
+		"contextMenus",
+		"bookmarks",
+		"tabs",
+		"unlimitedStorage"
+	],
+	"background": {
+		"scripts": [
+			"scripts/background-script.js"
+		],
+		"type": "module"
+	}
+}

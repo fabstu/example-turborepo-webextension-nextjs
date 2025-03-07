@@ -1,0 +1,5 @@
+packages/database/prisma/mydb.sqlite
+apps/web/.next/**
+.history/**
+**/dist/*
+packages/database/prisma/mydb.sqlite-journal
