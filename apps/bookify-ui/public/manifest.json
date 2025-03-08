@@ -19,11 +19,12 @@
 		"contextMenus",
 		"bookmarks",
 		"tabs",
-		"unlimitedStorage"
+		"unlimitedStorage",
+		"notifications"
 	],
 	"background": {
 		"scripts": [
-			"scripts/background-script.js"
+			"scripts/background.js"
 		],
 		"type": "module"
 	}

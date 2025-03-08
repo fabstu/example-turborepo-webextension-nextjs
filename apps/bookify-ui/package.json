@@ -9,7 +9,7 @@
 		"start": "next start",
 		"lint": "next lint",
 		"build:extension": "next build && npx turbo lint:build",
-		"lint:build": "mv out/_next out/assets || true && gsed -i 's/\\/_next/\\/assets/g' out/**.html",
+		"lint:build": "mv out/_next out/assets || true && sed -i 's/\\/_next/\\/assets/g' out/**.html",
 		"package": "npx turbo build:extension && zip -r packages/$(date -u +\"%Y-%m-%dT%H:%M:%SZ\").zip out"
 	},
 	"watch": {
@@ -26,6 +26,7 @@
 	},
 	"dependencies": {
 		"@types/firefox-webext-browser": "^120.0.4",
+		"@types/webextension-polyfill": "^0.12.3",
 		"chrome-types": "^0.1.345",
 		"next": "15.2.1",
 		"npm-watch": "^0.13.0",
