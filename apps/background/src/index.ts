@@ -87,10 +87,6 @@ browser.bookmarks.onCreated.addListener((info, newBookmark) => {
     })
     .then(setItem, onError);
   // browser.runtime.sendMessage({ message: 'content' });
-
-  // If was inserted into a managed folder...
-  // a) Was empty managed folder: Update internal state. Create new empty folder.
-  // b) Was not empty managed folder: Update internal state.
 });
 
 browser.bookmarks.onMoved.addListener((id, moveInfo) => {
@@ -144,17 +140,6 @@ console.log("Search bookmarks:");
 
 // https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/search
 function onFulfilled(bookmarkItems: Bookmarks.BookmarkTreeNode[]) {
-  // item:
-  /* 
-		Object { id: "5guFHGfu0JsG", title: "(3) Shurjoka bald in Haft? Verfahren wegen Volksverhetzung droht! | Anwalt Christian Solmecke - YouTube", index: 68, dateAdded: 1740467483425, type: "bookmark", url: "https://www.youtube.com/watch?v=27-GyTKuT2o", parentId: "nPWDNVcJUmTt" }
-		dateAdded: 1740467483425
-		id: "5guFHGfu0JsG"
-		index: 68​
-		parentId: "nPWDNVcJUmTt"
-		title: "(3) Shurjoka bald in Haft? Verfahren wegen Volksverhetzung droht! | Anwalt Christian Solmecke - YouTube"
-		type: "bookmark"
-		url: "https://www.youtube.com/watch?v=27-GyTKuT2o"
-	*/
   console.dir(bookmarkItems[0]);
 }
 
