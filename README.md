@@ -2,3 +2,4 @@
 
 - Uses turborepo for multi-package.
 - Builds `background.ts` to background.js using webpack, placing it in apps/bookify-ui/public/scripts. This Makes background.js be copied into the out folder when NextJS builds as well.
+- NextJS build settings are based on a [tutorial](https://thedatalife.com/building-a-nextjs-chrome-firefox-extension) by Niccolo Lampa.
